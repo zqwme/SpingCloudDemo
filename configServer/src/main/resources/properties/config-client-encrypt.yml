@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: config-client
+  datasource:
+    url: 127.0.0.1:3306
+    password: "{cipher}AQBSi9ruqdLeX7ZAs44BuXOKMK5NxD50GWHe3bm3OKXcdT8A8SPEexuwSztiSVA+c3lEActk0ZiHAtRH9+TD0FGjQmHZX2VkM/DNwUCRk9YsX2CXCUFE98PlEJP0dyZAwTXTRx2Mpy2rV43ZBQ5Q+ymCU4xNabwOVhOFXn8DyaBN+qcLzrvfDg4MjSTrz0Wz/vEC3pFxmmxo1zo65bbnGO6lyZYtztKa4owlF25NgMn2YuxhV9AoqgHTCuXmRYBOF/f0tmoCY06i1QZmwbWKFg31IK3QMvBAuSPeoZHRA4gKrsL6+rzzRWKKkRPd+b4hAhdIBWAZ/OhUCOoKJh7nLhknAnXiaU99tiR5KSquJd7Bas9GF5thZZ7h89fkii3K/Oo="
+    name: test
+    username: zqw
+
+server:
+  port: 10017
+eureka:
+  client:
+    service-url:
+      '{cipher}AQBLQTqgBRupwDF7erFo/wTOjzG5Agc4SAX1a+2QMowb/7bpEvs3K/LzxbDqQQGfQLBY7meVfAWyli8z+Qv7DyAaKf1UGaZcHRDwP/k+b14ixVmzvZE6x9JHTic7LjmhvkJlB8eE72ywT2omStHDhdujt83XXrxWh29dmi+C1ueZ/fIS3YEdnD7XkKEPs5Pa3tX4apngshjR2KuUCkSe9vdifpwGbdq3X+SouAtcfwT98w/8qhI/6nFqWIbS7JiAUIu7HZ1hnGsdH2P04IiA3E4AhKlWCRO0Y/C/uX3lW8sar58qykGzW94qvNln6yjCZHyj6psqAcfXvAJB05kNXMjngVVsPReTqnF0NlNQGdhHWpruSC6ixLnRCgopmx0xIYRsGzkRVqaItrlbWLPGFvaIyTsGryZz0hdqehVH+sI2lDKlYZ4P21gBfejsMxAsloU='
+logging:
+  file: ${spring.application.name}.log
+  path: d:/aa/
+  pattern:
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}) %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }) %clr(%-40.40logger{39}){cyan} %L %clr(:){faint}  %n${LOG_EXCEPTION_CONVERSION_WORD:%m}%n"
+    

@@ -1,0 +1,11 @@
+encrypt:
+  #密钥 必须配置在 bootstrap.yml
+#  key: acdxbcd
+  key-store:
+    location: classpath:/config-server.keystore
+    #密钥库密码
+    password: zqw123
+    #密钥库的别名
+    alias: config-server
+    #密钥密码
+    secret: zqw123

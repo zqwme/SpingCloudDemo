@@ -1,0 +1,39 @@
+spring:
+  profiles:
+    active:
+#    - subversion  #使用svn
+    - native # 配置使用本地储存
+  application:
+    name: config-server
+  cloud: 
+    config: 
+      server:
+#        native:
+#          search-locations: classpath:properties/ # 搜索src/main/resource 下的properties文件夹下的文件
+        svn:
+          uri: svn://zqwfs.f3322.net/zqwsvn/config/
+          username: zqw
+          password: zqw123
+          default-label: dome
+          #设置临时存储目录
+          basedir:
+            d:/aa/xx
+#          search-paths:
+#          - {application} #使用{application}占位符
+        git:
+          uri: 
+
+server:
+  port: 10008  
+
+#encrypt:
+   #密钥 必须配置在 bootstrap.yml
+#  key: adadqda
+  
+  
+logging:
+  file: ${spring.application.name}.log
+  path: d:/aa/
+  pattern:
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}) %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }) %clr(%-40.40logger{39}){cyan} %L %clr(:){faint}  %n${LOG_EXCEPTION_CONVERSION_WORD:%m}%n"
+            

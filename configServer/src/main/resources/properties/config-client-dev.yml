@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: config-client
+  datasource:
+    url: 127.0.0.1:3306
+    #zqw123
+    password: '{cipher}AQBRxWRp+botyIQ5afLGiMPEvOQqqtBhgC8erneZLng1BQuEZwXljSyVUxoHfAunjEjfT5n48pl44UDrIMN74D/XY6A5eZ3Mu4LVTbZNdPtMSmomNaE0Un67ZPIlnutES7X+WO/oC1O+HhSUsATyR7slAcdKEDQ7MfGW1BcoKG8yMBSrFyZGeacE1BvtVNOegnfFOPuBQ0JNz7SeIbxKB5G5NJoM2pkabXGfdOzcsuojs3bVLVvzJNM9UqDfyv7E86TeNfqV91hoDqdBuP4Cm6AS5fz8yzDgyF2/290psy2goFf4agfa9tCEd+Hjce2xrPbam+G+YVKNFDroam/sVlFPDIcmanB47ptaYVAD3ev2ms9BECfUuwEpltIj8QNCPsY='
+    name: test
+    username: zqw
+server:
+  port: 10010
+eureka:
+  client:
+    service-url:
+      {"defaultZone":"http://127.0.0.1:10001/eureka/"}
+logging:
+  file: ${spring.application.name}.log
+  path: d:/aa/
+  pattern:
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}) %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }) %clr(%-40.40logger{39}){cyan} %L %clr(:){faint}  %n${LOG_EXCEPTION_CONVERSION_WORD:%m}%n"
