@@ -1,0 +1,22 @@
+spring:
+  application: 
+    name: config-client
+  cloud:
+    config:
+      uri: http://127.0.0.1:10008/
+      #指定配置文件后缀
+      profile: dev
+      #分支配置，默认master
+#      label: dome
+server:
+  port: 10011
+  
+#eureka:
+#  client:
+#    service-url:
+#      {"defaultZone":"http://127.0.0.1:10001/eureka/"}
+#logging:
+#  file: ${spring.application.name}.log
+#  path: d:/aa/
+#  pattern:
+#    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}) %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }) %clr(%-40.40logger{39}){cyan} %L %clr(:){faint}  %n${LOG_EXCEPTION_CONVERSION_WORD:%m}%n"
