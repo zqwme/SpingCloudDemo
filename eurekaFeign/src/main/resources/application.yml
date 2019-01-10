@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: client-feign
+  http:
+    multipart:
+      max-file-size: 10000MB
+      max-request-size: 1000MB
+server:
+  port: 10006
+  connection-timeout: 100
+eureka:
+  client:
+    service-url:
+      {"defaultZone":"http://127.0.0.1:10001/eureka/"}
+logging:
+  file: ${spring.application.name}.log
+  path: d:/aa/
+  pattern:
+#    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}) %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }) %clr(%-40.40logger{39}){cyan} [%thread] %L %clr(:){faint}  %n%m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"
+     console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}) %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }) %clr(%-40.40logger{39}){cyan} %L %clr(:){faint}  %n${LOG_EXCEPTION_CONVERSION_WORD:%m}%n"
+

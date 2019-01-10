@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: client-ribbon
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: true
+server:
+  port: 10004
+eureka:
+  client:
+    service-url:
+      {"defaultZone":"http://127.0.0.1:10001/eureka/"}
+logging:
+  file: ${spring.application.name}.log
+  path: d:/aa/
+  pattern:
+#    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}) %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }) %clr(%-40.40logger{39}){cyan} [%thread] %L %clr(:){faint}  %n%m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"
+     console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}) %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }) %clr(%-40.40logger{39}){cyan} %L %clr(:){faint}  %n${LOG_EXCEPTION_CONVERSION_WORD:%m}%n"
+zuul:
+  retryable: true#开启重试
+
+ribbon:
+  connectTimeout: 2000# 请求连接的超时时间
+  readTimeout: 5000# 请求处理的超时时间
+  maxAutoRetries: 1# 对当前实例的重试次数
+  maxAutoRetriesNextServer: 5# 切换实例的重试次数
+  okToRetryOnAllOperations: true# 对所有操作请求都进行重试
+  
